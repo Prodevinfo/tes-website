@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
+import logoBlack from '../assets/tes-logo-black.svg';
+import logoWhite from '../assets/tes-logo-white.svg';
 
 function Footer() {
   return (
@@ -8,11 +10,8 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section footer-about">
             <div className="footer-brand">
-              <div className="footer-logo">
-                <span className="logo-icon">TES</span>
-              </div>
-
-              <div className="logo-text">Talent Extraction System</div>
+              <img className="footer-brand-logo brand-logo-dark" src={logoWhite} alt="TES Talent Extraction System" />
+              <img className="footer-brand-logo brand-logo-light" src={logoBlack} alt="TES Talent Extraction System" />
             </div>
             <p className="footer-description">
               Talent Extraction System — premium career mentorship and job placement for ambitious professionals.

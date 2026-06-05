@@ -35,31 +35,22 @@
   gap: 12px;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #5aa86d 0%, #47955a 100%);
-  color: white;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  font-size: 0.95rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+.footer-brand-logo {
+  display: block;
+  width: 210px;
+  height: auto;
 }
 
-.logo-icon {
-  font-weight: 900;
+.brand-logo-light {
+  display: none;
 }
 
-.logo-text {
-  color: white;
-  font-size: 0.98rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+body.theme-light .brand-logo-dark {
+  display: none;
+}
+
+body.theme-light .brand-logo-light {
+  display: block;
 }
 
 .footer-description {
@@ -185,6 +176,10 @@
     margin-bottom: 0.75rem;
   }
 
+  .footer-brand-logo {
+    width: 190px;
+  }
+
   .footer-section a {
     font-size: 0.9rem;
   }
@@ -218,6 +213,10 @@
   .footer-section h4 {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
+  }
+
+  .footer-brand-logo {
+    width: 170px;
   }
 
   .footer-section a {

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Navigation.css';
+import logoBlack from '../assets/tes-logo-black.svg';
+import logoWhite from '../assets/tes-logo-white.svg';
 
 function Navigation() {
   const [theme, setTheme] = useState(() => {
@@ -22,10 +24,8 @@ function Navigation() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand-block">
-          <div className="navbar-logo">
-            <span className="logo-icon">TES</span>
-          </div>
-          <div className="logo-text">Talent Extraction System</div>
+          <img className="navbar-brand-logo brand-logo-dark" src={logoWhite} alt="TES Talent Extraction System" />
+          <img className="navbar-brand-logo brand-logo-light" src={logoBlack} alt="TES Talent Extraction System" />
         </div>
         <ul className="nav-menu">
           <li className="nav-item"><a href="#about" className="nav-link">About</a></li>
