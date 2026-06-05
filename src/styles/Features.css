@@ -1,0 +1,159 @@
+.features-section {
+  background: rgba(244, 251, 244, 0.20);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 80px 20px;
+  color: white;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.features-content {
+  padding: 2rem 0;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 1.5rem 0;
+  color: white;
+}
+
+.features-highlight {
+  color: #8ccfa0;
+  font-style: italic;
+}
+
+.features-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d6ead5;
+  margin: 0 0 2rem 0;
+  font-weight: 300;
+}
+
+.features-link {
+  color: #b7ebc2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.features-link:hover {
+  color: #e2ffdc;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: rgba(24, 55, 38, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.75rem;
+  border-radius: 24px;
+  transition: all 0.35s ease;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(14px);
+}
+
+.feature-card:hover {
+  background: rgba(31, 70, 45, 0.88);
+  transform: translateY(-6px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.feature-card .feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: #f4fcf4;
+}
+
+.feature-card .feature-description {
+  font-size: 0.95rem;
+  color: #d7ead5;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 60px 20px;
+  }
+
+  .features-title {
+    font-size: 1.8rem;
+  }
+
+  .features-description {
+    font-size: 0.95rem;
+  }
+
+  .features-grid {
+    gap: 1.25rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section {
+    padding: 40px 15px;
+  }
+
+  .features-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .features-description {
+    font-size: 0.9rem;
+  }
+
+  .feature-card {
+    padding: 1rem;
+  }
+
+  .feature-card .feature-title {
+    font-size: 1rem;
+  }
+
+  .feature-card .feature-description {
+    font-size: 0.85rem;
+  }
+}
