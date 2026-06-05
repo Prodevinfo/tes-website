@@ -7,9 +7,12 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section footer-about">
-            <div className="footer-logo">
-              <span className="logo-icon">T</span>
-              <span className="logo-text">TES System</span>
+            <div className="footer-brand">
+              <div className="footer-logo">
+                <span className="logo-icon">TES</span>
+              </div>
+
+              <div className="logo-text">Talent Extraction System</div>
             </div>
             <p className="footer-description">
               Talent Extraction System — premium career mentorship and job placement for ambitious professionals.
