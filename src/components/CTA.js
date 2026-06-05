@@ -98,7 +98,7 @@ function CTA() {
               </select>
             </div>
 
-            <button type="submit" className="cta-btn">Get My Free Session →</button>
+            <button type="submit" className="cta-btn">Get Started with TES  →</button>
           </form>
         </div>
       </div>
