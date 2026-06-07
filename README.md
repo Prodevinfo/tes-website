@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# TES - Talent Extraction System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📝 Project Overview
+**TES (Talent Extraction System)** is a modern, responsive landing page designed to connect professionals with career mentorship and job placement services. 
 
-## Available Scripts
+This is a **frontend-only website** built using React. It does not currently have a backend or database connected.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ⚡ Key Features
+* **Interactive Landing Page**: A fully responsive website showcasing services, mentors, features, and success results.
+* **Light / Dark Mode**: Users can easily switch themes, with their choice saved automatically.
+* **Get Started Form**: A Contact / CTA (Call to Action) form that helps onboard interested candidates.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 📋 Onboarding Form Details
+The "Start Your Journey" form collects the following candidate details:
+* **Full Name**
+* **Email Address**
+* **Current Role / Industry**
+* **Primary Goal** (selected from a list of career goals)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Current Form Behavior:
+* **No Backend Connection**: It does **not** send data to a database or external server.
+* **React State**: The collected data is stored locally in the React component's state.
+* **Console Log**: The submitted data is logged to the browser's developer console.
+* **Success Message**: A browser alert popup is shown to the user upon clicking submit.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
+* **React** (Frontend library)
+* **JavaScript** (Application logic)
+* **CSS** (Custom styling and layout)
+* **GitHub** (Version control and code repository)
+* **Netlify** (Hosting and deployment platform)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
+The primary files and directories are organized as follows:
+* **`public/`**: Contains static files such as `index.html` and the favicon.
+* **`src/assets/`**: Houses visual assets like light and dark logos.
+* **`src/components/`**: Modular React components that build up the pages (e.g. Navigation, Hero, Services, CTA form).
+* **`src/styles/`**: Custom CSS stylesheets for individual components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Setup Instructions
 
-### `npm run eject`
+Follow these simple steps to run this project on your local machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Install Dependencies
+Open your terminal inside the project folder (`tes-website`) and run:
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Start the Development Server
+To launch the website locally in your browser:
+```bash
+npm start
+```
+This runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Build for Production
+To generate a production-ready folder containing optimized static files:
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🌐 Deployment (Netlify)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To deploy this project to Netlify, follow these quick steps:
+1. Push the repository to GitHub.
+2. Log into your [Netlify account](https://www.netlify.com/).
+3. Click **Add new site** and choose **Import an existing project** from GitHub.
+4. Select this repository.
+5. Set the build settings as follows:
+   * **Build command**: `npm run build`
+   * **Publish directory**: `build`
+6. Click **Deploy site**. Netlify will automatically build and publish your website whenever you push new changes to GitHub.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔮 Future Improvements
+In the future, we plan to implement the following features:
+* **Backend Integration**: Create an API server to process and validate user registrations.
+* **Database Storage**: Store submitted form data securely in a database (such as MongoDB or PostgreSQL).
+* **Email Notifications**: Automatically send confirmation emails to users and notification alerts to the admin team upon registration.
