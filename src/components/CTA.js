@@ -9,6 +9,9 @@ function CTA() {
     goal: ''
   });
 
+  // ✅ NEW: message state
+  const [message, setMessage] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -19,7 +22,9 @@ function CTA() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     console.log('Form submitted:', formData);
+
     // Reset form
     setFormData({
       fullName: '',
@@ -27,7 +32,12 @@ function CTA() {
       role: '',
       goal: ''
     });
-    alert('Thank you! We will contact you soon.');
+
+    // ❌ removed alert
+    // alert('Thank you! We will contact you soon.');
+
+    // ✅ NEW: inline message
+    setMessage('Thank you! We will contact you soon.');
   };
 
   return (
@@ -46,7 +56,14 @@ function CTA() {
         <div className="cta-form-wrapper">
           <h3 className="form-title">Start Your Journey</h3>
           <p className="form-subtitle">Fill out the form — we'll connect you with the right mentor.</p>
-          
+
+          {/* ✅ NEW: message shown above form */}
+          {message && (
+            <div className="form-message">
+              {message}
+            </div>
+          )}
+
           <form className="cta-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <input
@@ -98,7 +115,9 @@ function CTA() {
               </select>
             </div>
 
-            <button type="submit" className="cta-btn">Get Started with TES  →</button>
+            <button type="submit" className="cta-btn">
+              Get Started with TES →
+            </button>
           </form>
         </div>
       </div>
