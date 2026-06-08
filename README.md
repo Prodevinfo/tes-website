@@ -1,18 +1,18 @@
 # TES - Talent Extraction System
 
-## 📝 Project Overview
+##  Project Overview
 **TES (Talent Extraction System)** is a modern, responsive landing page designed to connect professionals with career mentorship and job placement services. 
 
 This is a **frontend-only website** built using React. It does not currently have a backend or database connected.
 
 ---
 
-## ⚡ Key Features
+##  Key Features
 * **Interactive Landing Page**: A fully responsive website showcasing services, mentors, features, and success results.
 * **Light / Dark Mode**: Users can easily switch themes, with their choice saved automatically.
 * **Get Started Form**: A Contact / CTA (Call to Action) form that helps onboard interested candidates.
 
-### 📋 Onboarding Form Details
+###  Onboarding Form Details
 The "Start Your Journey" form collects the following candidate details:
 * **Full Name**
 * **Email Address**
@@ -27,7 +27,7 @@ The "Start Your Journey" form collects the following candidate details:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 * **React** (Frontend library)
 * **JavaScript** (Application logic)
 * **CSS** (Custom styling and layout)
@@ -36,7 +36,7 @@ The "Start Your Journey" form collects the following candidate details:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 The primary files and directories are organized as follows:
 * **`public/`**: Contains static files such as `index.html` and the favicon.
 * **`src/assets/`**: Houses visual assets like light and dark logos.
@@ -45,7 +45,7 @@ The primary files and directories are organized as follows:
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 Follow these simple steps to run this project on your local machine:
 
@@ -70,7 +70,7 @@ npm run build
 
 ---
 
-## 🌐 Deployment (Netlify)
+##  Deployment (Netlify)
 
 To deploy this project to Netlify, follow these quick steps:
 1. Push the repository to GitHub.
@@ -84,7 +84,7 @@ To deploy this project to Netlify, follow these quick steps:
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 In the future, we plan to implement the following features:
 * **Backend Integration**: Create an API server to process and validate user registrations.
 * **Database Storage**: Store submitted form data securely in a database (such as MongoDB or PostgreSQL).
