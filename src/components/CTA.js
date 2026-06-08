@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/CTA.css';
 import axios from 'axios';
 
-const API_URL = "https://tes-backend-fpqn.onrender.com.onrender.com/api/contact/";
+const API_URL = "https://your-render-url.onrender.com/api/contact/submit/";
 
 function CTA() {
   const [formData, setFormData] = useState({
