@@ -20,10 +20,10 @@ The "Start Your Journey" form collects the following candidate details:
 * **Primary Goal** (selected from a list of career goals)
 
 #### Current Form Behavior:
-* **No Backend Connection**: It does **not** send data to a database or external server.
-* **React State**: The collected data is stored locally in the React component's state.
-* **Console Log**: The submitted data is logged to the browser's developer console.
-* **Success Message**: A browser alert popup is shown to the user upon clicking submit.
+* **Web3Forms Integration**: Sends submitted contact details to Web3Forms using the access token.
+* **Email Notifications**: Form submissions are emailed directly to the administrator.
+* **React State**: The collected data is stored in the React component's state and cleared upon successful submission.
+* **User Feedback**: A success message is shown in the UI after a successful submission.
 
 ---
 

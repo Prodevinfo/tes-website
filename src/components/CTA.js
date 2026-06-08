@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/CTA.css';
 import axios from 'axios';
 
-const API_URL = "https://your-render-url.onrender.com/api/contact/submit/";
+const WEB3FORMS_KEY = "1f78d3dd-7ce1-459f-93d8-32a32092f1a3";
 
 function CTA() {
   const [formData, setFormData] = useState({
@@ -26,23 +26,34 @@ function CTA() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(API_URL, {
-        full_name: formData.fullName,
+      const response = await axios.post("https://api.web3forms.com/submit", {
+        access_key: WEB3FORMS_KEY,
+        name: formData.fullName,
         email: formData.email,
         role: formData.role,
-        goal: formData.goal
+        goal: formData.goal,
+        subject: `New Candidate Sign-up: ${formData.fullName}`,
+        from_name: "TES Mentoring Portal"
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
       });
 
-      console.log("Success:", response.data);
-
-      setMessage("Thank you! We will contact you soon.");
-
-      setFormData({
-        fullName: '',
-        email: '',
-        role: '',
-        goal: ''
-      });
+      if (response.data.success) {
+        console.log("Success:", response.data);
+        setMessage("Thank you! We will contact you soon.");
+        setFormData({
+          fullName: '',
+          email: '',
+          role: '',
+          goal: ''
+        });
+      } else {
+        console.log("Error response:", response.data);
+        setMessage(response.data.message || "Something went wrong. Please try again.");
+      }
 
     } catch (error) {
       console.log("Error:", error.response?.data || error.message);
