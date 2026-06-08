@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/CTA.css';
+import axios from 'axios';
+
+const API_URL = "https://tes-backend-fpqn.onrender.com.onrender.com/api/contact/";
 
 function CTA() {
   const [formData, setFormData] = useState({
@@ -9,7 +12,6 @@ function CTA() {
     goal: ''
   });
 
-  // ✅ NEW: message state
   const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
@@ -20,24 +22,32 @@ function CTA() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Form submitted:', formData);
+    try {
+      const response = await axios.post(API_URL, {
+        full_name: formData.fullName,
+        email: formData.email,
+        role: formData.role,
+        goal: formData.goal
+      });
 
-    // Reset form
-    setFormData({
-      fullName: '',
-      email: '',
-      role: '',
-      goal: ''
-    });
+      console.log("Success:", response.data);
 
-    // ❌ removed alert
-    // alert('Thank you! We will contact you soon.');
+      setMessage("Thank you! We will contact you soon.");
 
-    // ✅ NEW: inline message
-    setMessage('Thank you! We will contact you soon.');
+      setFormData({
+        fullName: '',
+        email: '',
+        role: '',
+        goal: ''
+      });
+
+    } catch (error) {
+      console.log("Error:", error.response?.data || error.message);
+      setMessage("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -45,7 +55,11 @@ function CTA() {
       <div className="cta-container">
         <div className="cta-content">
           <p className="cta-label">GET STARTED TODAY</p>
-          <h2 className="cta-title">Connect With Our <br /> <span className="cta-highlight">Mentoring Team</span></h2>
+          <h2 className="cta-title">
+            Connect With Our <br />
+            <span className="cta-highlight">Mentoring Team</span>
+          </h2>
+
           <ul className="cta-features">
             <li><span className="checkmark">✓</span> Matched with a mentor in 48 hours</li>
             <li><span className="checkmark">✓</span> First 1-on-1 session completely free</li>
@@ -55,9 +69,10 @@ function CTA() {
 
         <div className="cta-form-wrapper">
           <h3 className="form-title">Start Your Journey</h3>
-          <p className="form-subtitle">Fill out the form — we'll connect you with the right mentor.</p>
+          <p className="form-subtitle">
+            Fill out the form — we'll connect you with the right mentor.
+          </p>
 
-          {/* ✅ NEW: message shown above form */}
           {message && (
             <div className="form-message">
               {message}
